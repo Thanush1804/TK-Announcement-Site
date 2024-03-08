@@ -5,6 +5,7 @@ import { App } from "./App";
 import { BrowserRouter } from "react-router-dom";
 
 const rootElement = document.getElementById("root");
+document.body.style.overflow='hidden';
 const root = ReactDOM.createRoot(rootElement);
 
 root.render(

@@ -17,7 +17,7 @@ const StaticCard = ({
       <Flex
         pos="relative"
         justifyContent="center"
-        w="80%"
+        w="100%"
         h="50%"
         overflow="hidden"
         alignItems="flex-end"
@@ -30,6 +30,8 @@ const StaticCard = ({
           transform="translateY(50%)"
           color="white"
           className="Timer_Num"          
+          sx={{ '@media only screen and (max-width: 600px)': {fontSize: '2xl'}
+          }}
         >
           {unit}
         </Text>
@@ -41,7 +43,7 @@ const StaticCard = ({
     <Flex
       pos="relative"
       justifyContent="center"
-      w="80%"
+      w="100%"
       h="50%"
       overflow="hidden"
       alignItems="flex-start"
@@ -54,6 +56,8 @@ const StaticCard = ({
         transform="translateY(-50%)"
         color="white"
         className="Timer_Num"
+      sx={{'@media only screen and (max-width: 600px)': {fontSize: '2xl'}
+        }}
       >
         {unit}
       </Text>
@@ -89,10 +93,10 @@ const AnimatedCard = memo(
         justifyContent="center"
         pos="absolute"
         left={0}
-        w="80%"
+        w="100%"
         h="50%"
         overflow="hidden"
-        sx={{ backfaceVisibility: "hidden", transformStyle: "preserve-3d" }}
+        sx={{ backfaceVisibility: "hidden", transformStyle: "preserve-3d"}}
         top={0}
         alignItems="flex-end"
         transformOrigin="50% 100%"
@@ -111,6 +115,7 @@ const AnimatedCard = memo(
           transform="translateY(50%)"
           color="white"
           className="Timer_Num"
+          sx={{'@media only screen and (max-width: 600px)': {fontSize: '2xl'}}}
         >
           {displayUnit}
         </Text>
@@ -138,10 +143,10 @@ const AnimatedCardBottom = ({ unit }: { unit: number | string }) => {
       justifyContent="center"
       pos="absolute"
       left={0}
-      w="80%"
+      w="100%"
       h="50%"
       overflow="hidden"
-      sx={{ backfaceVisibility: "hidden", transformStyle: "preserve-3d" }}
+      sx={{ backfaceVisibility: "hidden", transformStyle: "preserve-3d"}}
       top="50%"
     alignItems="flex-start"
       transformOrigin="50% 0%"
@@ -155,6 +160,7 @@ const AnimatedCardBottom = ({ unit }: { unit: number | string }) => {
         transform="translateY(-50%)"
         color="white"
         className="Timer_Num"
+        sx={{'@media only screen and (max-width: 600px)': {fontSize: '2xl'}}}
       >
         {displayUnit}
       </Text>
@@ -194,8 +200,8 @@ const FlipContainer = ({
       <Box
         display="block"
         pos="relative"
-        w="23vw"
-        h="8vh"
+        w="22vw"
+        h="10vh"
         bgColor="#12161C"
         rounded="6px"
         sx={{ perspective: "300px", perspectiveOrigin: "50% 50%" }}
@@ -229,7 +235,7 @@ const renderer: CountdownRendererFn = ({
   if (completed) return null;
   return (
     <Center>
-      <HStack align="center" spacing={1}>
+<HStack align="center" spacing={1}> 
         <FlipContainer number={days} title="days" />
         <FlipContainer number={hours} title="hours" />
         <FlipContainer number={minutes} title="mins" />

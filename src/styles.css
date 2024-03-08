@@ -30,14 +30,10 @@
 }
 @media only screen and (max-width: 600px) {
   
-  .Timer_Num{
-    color:red;
-    font-size:1rem;
-  }
   
   .TimerDiv{
     display:inline-flexbox;
-    max-width:100vw;
-    
-}
+    max-width:100vh;
+    height:15vh;
+  }
 }
