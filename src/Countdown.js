@@ -17,7 +17,7 @@ const StaticCard = ({
       <Flex
         pos="relative"
         justifyContent="center"
-        w="100%"
+        w="22vw"
         h="50%"
         overflow="hidden"
         alignItems="flex-end"
